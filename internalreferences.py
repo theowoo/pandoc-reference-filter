@@ -545,7 +545,7 @@ class ReferenceManager(object):
         else:
             citation = citations[0]
 
-        prefix = citation['citationPrefix'] + [pf.Space()]
+        prefix = citation['citationPrefix']
         suffix = citation['citationSuffix']
         
 
@@ -567,8 +567,8 @@ class ReferenceManager(object):
             return prefix + [link] + suffix
 
         else:
-            link = pf.Link(["",[],[]], [pf.Str(text)], ('#' + label, ''))
-            return prefix + [link] + suffix
+            link = pf.Link(["",[],[]], prefix+[pf.Str(text)]+suffix, ('#' + label, ''))
+            return [link]
 
     def convert_multiref(self, key, value, format, metadata):
         """Convert all internal links from '#blah' into format
