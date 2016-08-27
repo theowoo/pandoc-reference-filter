@@ -23,7 +23,6 @@ $$
 
 ![no numbering here (ˈjuːnɪˌkəʊd!)](image.png "link text"){#fig:nonum -}
 
-
 ## Multiple references {-}
 
 We can refer to multiple things of the same type: [@fig:attr; @fig:attr2]
@@ -33,3 +32,7 @@ Or to multiple things of mixed type: [@fig:attr; @fig:attr2;
 
 But if there are any missing keys, nothing will happen: [@fig:attr;
 @fig:idontexist]
+
+## Suffix {-}
+
+You can add a suffix to refer to a subfigure: [@fig:attr\.A]
